@@ -12,6 +12,7 @@ public class RadioTest {
         long actual = service.getCurVolume();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void secondVolumeUpTest() {
         Radio service = new Radio();
@@ -20,6 +21,7 @@ public class RadioTest {
         long actual = service.getCurVolume();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void firstVolumeDownTest() {
         Radio service = new Radio();
@@ -28,6 +30,7 @@ public class RadioTest {
         long actual = service.getCurVolume();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void secondVolumeDownTest() {
         Radio service = new Radio();
@@ -36,6 +39,7 @@ public class RadioTest {
         long actual = service.getCurVolume();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void firstNextRStationTest() {
         Radio service = new Radio();
@@ -44,6 +48,7 @@ public class RadioTest {
         long actual = service.getCurRStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void secondNextRStationTest() {
         Radio service = new Radio();
@@ -61,6 +66,7 @@ public class RadioTest {
         long actual = service.getCurRStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void firstPreviousRStationTest() {
         Radio service = new Radio();
@@ -69,6 +75,7 @@ public class RadioTest {
         long actual = service.getCurRStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void secondPreviousRStationTest() {
         Radio service = new Radio();
@@ -78,28 +85,49 @@ public class RadioTest {
         long actual = service.getCurRStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void firstSetRStation() {
+    public void firstSetRStationTest() {
         Radio service = new Radio();
         service.setRStation(11);
         long expected = 9;
         long actual = service.getCurRStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void secondSetRStation() {
+    public void secondSetRStationTest() {
         Radio service = new Radio();
         service.setRStation(0);
         long expected = 0;
         long actual = service.getCurRStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void thirdSetRStation() {
+    public void thirdSetRStationTest() {
         Radio service = new Radio();
         service.setRStation(1);
         long expected = 0;
         long actual = service.getCurRStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void firstSetMaxRStationTest() {
+        Radio service = new Radio();
+        service.setMaxRStation(15);
+        long expected = 14;
+        long actual = service.getMaxRStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void secondSetMaxRStationTest() {
+        Radio service = new Radio();
+        service.setMaxRStation(0);
+        long expected = 1;
+        long actual = service.getMaxRStation();
         Assertions.assertEquals(expected, actual);
     }
 }
